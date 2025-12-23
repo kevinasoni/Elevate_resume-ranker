@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ranking results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Ranking results for {{ job_position }}</h1>
+  <p class="subtitle">Candidates scored against your job description.</p>
+
+  <div class="jd">
+    <h3>Job description (summary)</h3>
+    <pre>{{ jd_text }}</pre>
+  </div>
+
+    <table>
+  <thead>
+    <tr>
+      <th>Candidate Name</th>
+      <th>TF-IDF</th>
+      <th>Keyword Coverage</th>
+      <th>Skill Bonus</th>
+      <th>Final Score</th>
+      <th>Fit Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in table %}
+    <tr>
+      <td>{{ row.candidate_name }}</td>
+      <td>{{ row.tfidf }}</td>
+      <td>{{ row.keyword_cov }}</td>
+      <td>{{ row.skill_bonus }}</td>
+      <td><strong>{{ row.final_score }}</strong></td>
+      <td>{{ row.fit_level }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+  
+
+  <div class="actions">
+    <a class="btn" href="{{ url_for('download_report', report_name=report_name) }}">Download HR report (CSV)</a>
+    <a class="btn secondary" href="{{ url_for('index') }}">Rank another batch</a>
+  </div>
+
+  <footer>
+    <p>Weights: TF-IDF 60%, Keywords 25%, Skills 15% — tweak in scoring.py.</p>
+  </footer>
+</div>
+</body>
+</html>
