@@ -1,27 +1,134 @@
-# Elevate_resume-ranker
-# AI-Powered Resume Ranker
 
-This project ranks resumes against a job description using NLP and ML techniques.
+
+
+
+[Copy]AI-Powered Resume Ranker README
+
+
+Share
+
+
+
+Paragraph
+
+
+
+
+Here’s a polished README.md you can paste directly into your GitHub repo, Kevina 🤓. It’s recruiter‑friendly, professional, and highlights your project clearly:
+
+# 📝 AI-Powered Resume Ranker
+
+An internship-ready project that ranks resumes against a job description using **NLP** and **Machine Learning**.  
+Built with **Flask**, **spaCy**, **scikit-learn**, and **PyPDF2**, this tool helps HRs quickly identify the best candidates.
+
+---
 
 ## 🚀 Features
-- Upload multiple resumes (PDF)
-- Extract text using PyPDF2
-- Preprocess with spaCy
-- Score resumes using TF-IDF + keyword coverage
+- Upload multiple resumes (PDF format)
+- Extract text automatically using PyPDF2
+- Preprocess text with spaCy (tokenization, lemmatization)
+- Score resumes using:
+  - TF-IDF similarity
+  - Keyword coverage
+  - Skill bonus weighting
 - Generate HR-friendly CSV reports
-- Flask web UI for easy use
+- Simple Flask web UI for interaction
+
+---
 
 ## 📂 Project Structure
-- `app.py` → Flask server
-- `templates/` → HTML frontend
-- `static/` → CSS styling
-- `scoring.py` → Resume ranking logic
-- `utils.py` → PDF/text helpers
-- `reports/` → Generated CSV outputs
+resume-ranker/ │ ├── app.py                  # Main Flask app ├── requirements.txt        # Dependencies ├── README.md               # Project documentation │ ├── templates/              # HTML templates │   ├── index.html          # Upload form │   └── results.html        # Results table │ ├── static/                 # CSS styling │   └── style.css │ ├── scoring.py              # Resume ranking logic ├── utils.py                # PDF/text helpers └── reports/                # Generated CSV outputs
 
-## ⚙️ Setup
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
 ```bash
-conda create -n resume-ranker python=3.10
-conda activate resume-ranker
+git clone https://github.com/yourusername/resume-ranker.git
+cd resume-ranker
+2. Create a virtual environment (or use Conda)
+python -m venv venv
+venv\Scripts\activate   # Windows
+source venv/bin/activate # Mac/Linux
+3. Install dependencies
 pip install -r requirements.txt
+4. Download spaCy model
 python -m spacy download en_core_web_sm
+▶️ Usage
+Run the Flask app:
+
+python app.py
+Open your browser at:
+
+http://127.0.0.1:5000/
+Upload a job description and resumes → get ranked results instantly.
+
+📊 Example Output
+Candidate
+
+TF-IDF
+
+Keyword Coverage
+
+Skill Bonus
+
+Final Score
+
+Fit Level
+
+Alice
+
+0.78
+
+0.65
+
+0.10
+
+0.72
+
+Excellent Fit
+
+Bob
+
+0.55
+
+0.40
+
+0.05
+
+0.50
+
+Moderate Fit
+
+🛠 Tech Stack
+Flask – Web framework
+
+spaCy – NLP preprocessing
+
+scikit-learn – TF-IDF & ML scoring
+
+PyPDF2 – Resume text extraction
+
+pandas/numpy – Data handling
+
+📌 Future Improvements
+Add support for DOCX resumes
+
+Deploy on Streamlit or Heroku
+
+Add interactive dashboard for HRs
+
+Integrate advanced embeddings (e.g., BERT)
+
+👩‍💻 Author
+Kevina – Curious learner & builder of practical AI/ML projects.
+Persistent in mastering technical concepts and passionate about making tools intuitive for end users.
+
+
+---
+
+✅ This README is **ready to paste** into your repo. It makes your project look professional and recruiter‑friendly.  
+
+Kevina, do you want me to also add **GitHub badges** (like Python version, Flask, License) at the top so your repo looks even more polished?
