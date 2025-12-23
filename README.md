@@ -1,21 +1,5 @@
 
 
-
-
-[Copy]AI-Powered Resume Ranker README
-
-
-Share
-
-
-
-Paragraph
-
-
-
-
-Here’s a polished README.md you can paste directly into your GitHub repo, Kevina 🤓. It’s recruiter‑friendly, professional, and highlights your project clearly:
-
 # 📝 AI-Powered Resume Ranker
 
 An internship-ready project that ranks resumes against a job description using **NLP** and **Machine Learning**.  
@@ -56,7 +40,8 @@ source venv/bin/activate # Mac/Linux
 pip install -r requirements.txt
 4. Download spaCy model
 python -m spacy download en_core_web_sm
-▶️ Usage
+▶️ Usage 
+
 Run the Flask app:
 
 python app.py
@@ -122,13 +107,3 @@ Add interactive dashboard for HRs
 
 Integrate advanced embeddings (e.g., BERT)
 
-👩‍💻 Author
-Kevina – Curious learner & builder of practical AI/ML projects.
-Persistent in mastering technical concepts and passionate about making tools intuitive for end users.
-
-
----
-
-✅ This README is **ready to paste** into your repo. It makes your project look professional and recruiter‑friendly.  
-
-Kevina, do you want me to also add **GitHub badges** (like Python version, Flask, License) at the top so your repo looks even more polished?
